@@ -1,0 +1,52 @@
+<div class="jsonlogic-field">
+
+{{ textarea }}
+
+<div class="jsonlogic-editor">
+    <div class="jsonlogic-menu">
+        <div class="jsonlogic-submenu active">
+            <span class="jsonlogic-submenu-header">Operators</span>
+            <div class="jsonlogic-submenu-content">
+                {% for operator in operators %}<span class="jsonlogic-button jsonlogic-operator"
+                    data-jsonlogic='{"{{ operator.operator }}":{{ operator.initial_args }}}'>{{ operator.operator }}</span>{% endfor %}
+            </div>
+        </div>
+        <div class="jsonlogic-submenu">
+            <span class="jsonlogic-submenu-header">Constants</span>
+            <div class="jsonlogic-submenu-content">
+                <span class="jsonlogic-button jsonlogic-number"
+                    data-jsonlogic='0'>number
+                </span><span class="jsonlogic-button jsonlogic-const"
+                    data-jsonlogic='true'>true
+                </span><span class="jsonlogic-button jsonlogic-const"
+                    data-jsonlogic='false'>false
+                </span><span class="jsonlogic-button jsonlogic-const"
+                    data-jsonlogic='null'>null</span>
+            </div>
+        </div>
+        {% if actions %}
+        <div class="jsonlogic-submenu">
+            <span class="jsonlogic-submenu-header">Actions</span>
+            <div class="jsonlogic-submenu-content">
+                {% for action in actions %}<span class="jsonlogic-button jsonlogic-action"
+                    data-jsonlogic='"{{ action }}"'>{{ action }}
+                </span>{% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        {% if variables %}
+        <div class="jsonlogic-submenu">
+            <span class="jsonlogic-submenu-header">Variables</span>
+            <div class="jsonlogic-submenu-content">
+                {% for variable in variables %}<span class="jsonlogic-button jsonlogic-variable"
+                    data-jsonlogic='{"var":["{{ variable }}"]}'>{{ variable }}
+                </span>{% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <div class="jsonlogic-container">
+    </div>
+</div>
+
+</div>

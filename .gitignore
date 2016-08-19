@@ -1,0 +1,12 @@
+*.swp
+
+*.pyc
+__pycache__
+/*.egg-info
+
+db.sqlite3
+
+/.tox
+*debuglog.txt
+.coverage
+htmlcov

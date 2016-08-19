@@ -1,0 +1,79 @@
+.jsonlogic-field textarea {
+    display: none;
+}
+
+.jsonlogic {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 5px;
+}
+.jsonlogic.active {
+    border: 1px solid red;
+}
+
+.jsonlogic-editor {
+    display: inline-block;
+    margin: -4px -5px;
+}
+
+.jsonlogic-container {
+    display: inline-block;
+}
+
+.jsonlogic-button {
+    display: inline-block;
+    margin: 1px;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.jsonlogic-menu {
+    margin: 4px 0;
+    position: relative;
+    width: 800px;
+    height: 4.5em;
+}
+.jsonlogic-submenu {
+    display: inline-block;
+    vertical-align: top;
+}
+.jsonlogic-submenu-header {
+    display: inline-block;
+    z-index: 100;
+    padding: 5px;
+    cursor: pointer;
+}
+.jsonlogic-submenu-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background: #eee;
+}
+.jsonlogic-submenu.active .jsonlogic-submenu-header {
+    background: #eee;
+}
+.jsonlogic-submenu.active .jsonlogic-submenu-content {
+    display: block;
+}
+
+.jsonlogic input {
+    width: 2em;
+    border: none;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    text-align: center;
+}
+
+
+.jsonlogic-action {background: #fdd;}
+.jsonlogic-variable {background: #dfd;}
+.jsonlogic-const {background: #ddf;}
+.jsonlogic-number, .jsonlogic-number input {background: #ffa;}
+.jsonlogic-operator {background: #eff;}
+
+
