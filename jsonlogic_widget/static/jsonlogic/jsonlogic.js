@@ -5,6 +5,7 @@
 
     var operators = {
         '?:': {labels: ['if', 'then', 'else']},
+        'if': {labels: ['if', 'then', 'else']},
         '!': {labels: ['!']},
         cat: {labels: ['cat', ',']},
         count: {labels: ['count', ',']},
@@ -134,8 +135,6 @@
 
     }
 
-    editor.on("click", ".jsonlogic-submenu-header")
-
     drawIn(container, root);
   };
 
@@ -143,8 +142,8 @@
         $(".jsonlogic-field").each(function() {
             $(this).jsonLogicEdit()
         });
-        $(document).on("formset:added", function() {
-            $(".jsonlogic-field", this).each(function() {
+        $(document).on("formset:added", function(event, row) {
+            $(".jsonlogic-field", row).each(function() {
                 $(this).jsonLogicEdit()
             });
         });

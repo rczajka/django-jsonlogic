@@ -14,8 +14,7 @@
 }
 
 .jsonlogic-editor {
-    display: inline-block;
-    margin: -4px -5px;
+    margin: -4px -5px -5px 170px;
 }
 
 .jsonlogic-container {
@@ -34,7 +33,6 @@
 .jsonlogic-menu {
     margin: 4px 0;
     position: relative;
-    width: 800px;
     height: 4.5em;
 }
 .jsonlogic-submenu {

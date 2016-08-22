@@ -18,7 +18,7 @@ class Tox(TestCommand):
 
 setup(
     name='django-jsonlogic',
-    version='0.1',
+    version='0.1.1',
     description='Django form widget for editing logic in JSON-Logic format.',
     long_description=long_description,
     url='https://github.com/rczajka/django-jsonlogic',
