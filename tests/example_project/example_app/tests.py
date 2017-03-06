@@ -2,6 +2,8 @@ import django
 from django.contrib.auth.models import User
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from selenium.webdriver.firefox.webdriver import WebDriver
+from selenium.webdriver.support.expected_conditions import staleness_of
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 class JSONWidgetTest(StaticLiveServerTestCase):
@@ -29,7 +31,9 @@ class JSONWidgetTest(StaticLiveServerTestCase):
         username_input.send_keys('user')
         password_input = self.selenium.find_element_by_name("password")
         password_input.send_keys('secret')
-        self.selenium.find_element_by_xpath('//input[@value="Log in"]').click()
+        password_input.submit()
+        #self.selenium.find_element_by_xpath('//input[@value="Log in"]').click()
+        WebDriverWait(self.selenium, 10).until(staleness_of(password_input))
 
         self.selenium.get('%s%s' % (
             self.live_server_url,

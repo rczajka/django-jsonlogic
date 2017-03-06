@@ -18,3 +18,9 @@ Known issues:
 In Django 1.8, the widget won't work in dynamically added rows in inline
 formsets.  This is because the JavaScript event on adding a row was only
 added in Django 1.9.
+
+
+Testing:
+--------
+
+Selenium on Firefox needs geckodriver.
